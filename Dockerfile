@@ -1,12 +1,12 @@
 FROM ubuntu:18.04
 
-ARG UNAME=node
-ARG UID=1000
-ARG GID=1000
-
-RUN groupadd -g $GID -o $UNAME
-RUN useradd -m -u $UID -g $GID -s /bin/bash $UNAME
-RUN adduser -S -G $UNAME -u $UID -s /bin/bash -h
+#ARG UNAME=node
+#ARG UID=1000
+#ARG GID=1000
+#
+#RUN groupadd -g $GID -o $UNAME
+#RUN useradd -m -u $UID -g $GID -s /bin/bash $UNAME
+#RUN adduser -S -G $UNAME -u $UID -s /bin/bash -h
 
 #RUN groupadd --gid 1000 node && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
@@ -97,8 +97,5 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
-# Instalação do vue
-RUN npm install -g @vue/cli
-
 # 
-USER $UNAME
+#USER $UNAME
