@@ -97,5 +97,7 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
+RUN apt-get update && apt-get install -y git && apt-get install -y nano
 # 
 #USER $UNAME
+
